@@ -1,0 +1,90 @@
+.container-all{
+background-color: #0d1b2a;
+display: flex;
+width:100vw;
+justify-content: space-between;
+height: 50px;
+padding: 10px;
+color: #415a77;
+
+}
+
+.input{
+    margin-right: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #415a77;
+    border: #415a77;
+    ;
+
+
+}
+
+.cart {
+width: 40px;
+margin-right: 30px;
+align-self: start;
+filter: invert();
+
+
+}
+
+.segundo{
+    display: flex;
+    align-items: center;
+
+
+}
+
+.contaName{
+    margin-right: 20px;
+}
+
+.account{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor:pointer;
+    
+}
+.account:hover{
+    background-color:#415a55 ;
+    cursor: pointer;
+}
+
+
+
+.userImg{
+    width: 50px;
+    border: 1px solid;
+    border-radius: 30px;
+    margin-right: 40px;
+    filter: invert();
+}
+
+.logoutButton{
+    position: absolute;
+    width: 150px;
+    bottom: -25px;
+    background-color: #415a77;
+    border: #415a77;
+
+
+    
+}
+
+.cart-div{
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-number{
+    position: absolute;
+    bottom: 20px;
+    left: 39px;
+}
+
+.nome-loja:hover{
+    background-color:#415a55 ;
+    cursor: pointer;
+}
