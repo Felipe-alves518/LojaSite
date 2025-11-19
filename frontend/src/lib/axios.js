@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // in production, there's no localhost so we have to make this dynamic
-const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api/v1/products" : "/api/v1/products";
+const BASE_URL = "https://loja-site-api.vercel.app/api/v1/products";
 
 const api = axios.create({
   baseURL: BASE_URL,
