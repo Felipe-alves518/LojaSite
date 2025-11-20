@@ -14,7 +14,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage loading={loading} SetLoading={SetLoading}/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<Login loading={loading} SetLoading={SetLoading} />}/>
         <Route path='/cart' element={<Cart buttonDelete={buttonDelete} Setdelete={Setdelete} loading={loading} SetLoading={SetLoading}/>}/>
 
       </Routes>

@@ -3,11 +3,12 @@ import Axios from 'axios';
 import { Route, useNavigate } from 'react-router';
 import './login.css'
 import api from '../lib/axios';
+import Loader from '../components/loader';
 
 
 
 
-const Login = () => {
+const Login = ({SetLoading,loading}) => {
     let navigate = useNavigate();
     const [user,setUser] = useState('')
     const [senha,setSenha] = useState('')
@@ -42,9 +43,11 @@ const Login = () => {
 
     const postUser = async () => {
        // const token = await Axios.post(url,{username:user,password:senha}).catch(()=>{Seterrmesage(1)})
-        const token = await api.post('/register',{username:user,password:senha}).catch(()=>{Seterrmesage(1)})
+        SetLoading(true);
+        const token = await api.post('/register',{username:user,password:senha}).catch(()=>{Seterrmesage(1); SetLoading(false);})
         localStorage.setItem('token',token.data.token);
         Seterrmesage(0);
+        SetLoading(false);
         window.location.reload();
 
 
@@ -53,9 +56,11 @@ const Login = () => {
 
     const getLogin = async () => {
        // const token = await Axios.post(urlLogin,{username:loginName,password:loginpass}).catch(()=>{Seterrmesage2(1)});
-        const token = await api.post('/login',{username:loginName,password:loginpass}).catch((error) => { Seterrmesage2(1); console.log(error.response.data)});
+        SetLoading(true);
+        const token = await api.post('/login',{username:loginName,password:loginpass}).catch((error) => { Seterrmesage2(1); SetLoading(false); console.log(error.response.data)});
         localStorage.setItem('token',token.data.token);
         Seterrmesage2(0);
+        SetLoading(false);
         window.location.reload();
 
 
@@ -87,6 +92,7 @@ const Login = () => {
     return(
           <>
           <title>Login/Register</title>
+          <Loader loading={loading}/>
           <div className='lr-container'>
             <div className='regi-container'>
                 <h1>Register</h1>
