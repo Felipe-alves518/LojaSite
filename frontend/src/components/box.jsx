@@ -6,7 +6,7 @@ import left from '../assets/angle-left.png'
 import api from '../lib/axios';
 
 
-const ProductBox = ({newPurchase, SetNewPurchase, search}) => {
+const ProductBox = ({newPurchase, SetNewPurchase, search, SetLoading}) => {
 
 //const url = 'http://localhost:5000/api/v1/products';
 
@@ -19,13 +19,16 @@ const [page,SetPage] = useState(1);
 useEffect(() => {
 
     const fetchData = async () => {
+        SetLoading(true);
         if (search){
             SetPage(1)
+            SetLoading(false);
         }
         try {
             const products = await api.get('/',{params:{page:page, name:search}});
             //const products = await Axios.get(url,{params:{page:page, name:search}});
             setDados(products.data);
+            SetLoading(false);
         } catch (error) {
             console.log(error);
         }
@@ -39,11 +42,13 @@ const cartProduct = async (productId) =>{
     //const url = `http://localhost:5000/api/v1/products/${productId}`
 try {
     //const ADDCART = await Axios.patch(url,{},{
+    SetLoading(true);
     const ADDCART = await api.patch(`/${productId}`,{},{
         headers:{
             Authorization:`Bearer ${token}`
         }})
     SetNewPurchase(newPurchase+1)
+    SetLoading(false);
         
     
     

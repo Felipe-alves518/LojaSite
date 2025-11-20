@@ -3,10 +3,11 @@ import Axios from 'axios';
 import './cartBox.css';
 import trash from '../assets/delete.png'
 import api from '../lib/axios';
+import Loader from "./loader";
 
 
 
-const CartBox = ({buttonDelete,Setdelete}) => {
+const CartBox = ({buttonDelete,Setdelete, loading,  SetLoading}) => {
 
 
     //const url = 'http://localhost:5000/api/v1/products/cart';
@@ -16,10 +17,12 @@ const CartBox = ({buttonDelete,Setdelete}) => {
     const [ProductCart,SetCart] = useState([])
 
     const deleteItem = async (productID) => {
+        SetLoading(true);
         const token = localStorage.getItem('token');
         const DELETE = await api.delete(`/${productID}`,{headers:{Authorization: `Bearer ${token}`}});
         //const DELETE = await Axios.delete(`http://localhost:5000/api/v1/products/${productID}`,{headers:{Authorization: `Bearer ${token}`}});
         Setdelete(buttonDelete+1)
+        SetLoading(false);
 
 
 
@@ -58,7 +61,7 @@ const CartBox = ({buttonDelete,Setdelete}) => {
 
     return (
         <>
-
+        <Loader loading={loading}/>
         <div className="cartBoxBody">
             <div className="allCartbox">
        { ProductCart.map((elements)=>{

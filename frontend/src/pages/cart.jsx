@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router";
 
 
-const Cart = ({buttonDelete,Setdelete}) => {
+const Cart = ({buttonDelete,Setdelete, loading, SetLoading}) => {
     let navigate = useNavigate();
     useEffect(()=>{
     const token = localStorage.getItem('token')
@@ -22,7 +22,7 @@ const Cart = ({buttonDelete,Setdelete}) => {
         <div>
         <Header buttonDelete={buttonDelete}/>
         </div>
-        <CartBox buttonDelete={buttonDelete} Setdelete={Setdelete} />
+        <CartBox buttonDelete={buttonDelete} Setdelete={Setdelete} loading={loading} SetLoading={SetLoading} />
        </>
 
     )

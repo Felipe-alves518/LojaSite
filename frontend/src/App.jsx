@@ -8,13 +8,14 @@ import { useState } from 'react'
 
 function App() {
   const [buttonDelete,Setdelete] = useState(0);
+  const [loading,SetLoading] = useState(false)
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
+        <Route path="/" element={<HomePage loading={loading} SetLoading={SetLoading}/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path='/cart' element={<Cart buttonDelete={buttonDelete} Setdelete={Setdelete}/>}/>
+        <Route path='/cart' element={<Cart buttonDelete={buttonDelete} Setdelete={Setdelete} loading={loading} SetLoading={SetLoading}/>}/>
 
       </Routes>
       
