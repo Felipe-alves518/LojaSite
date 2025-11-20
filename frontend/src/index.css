@@ -4,3 +4,7 @@ margin:0px;
 overflow-x: hidden;
 overflow-y: scroll;
 }
+
+input[type=button]{
+cursor: pointer;
+}
