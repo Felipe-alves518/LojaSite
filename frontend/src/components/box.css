@@ -120,3 +120,16 @@ h1{
     border-top-right-radius: 10px;
 }
 
+
+@media (max-width: 600px){
+    .container-master{
+        width: 100vw;
+    }
+    .baixo{
+        width: 50vw;
+        font-size: 3.2vw;
+    }
+    .image{
+        width: 52vw;
+    }
+}

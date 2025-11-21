@@ -35,3 +35,29 @@
 font-size: 15px;
 color:#b01212;
 }
+
+@media (max-width: 600px){
+
+    .lr-container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        
+    }
+    .login-container{
+        margin:0px;
+        width: 50vw;
+        
+    }
+    .regi-container{
+        margin:0px;
+        margin-bottom: 40.2vw;
+        width: 50vw;
+    }
+    
+
+}

@@ -15,7 +15,7 @@ color: #415a77;
     border-radius: 20px;
     background-color: #415a77;
     border: #415a77;
-    ;
+    
 
 
 }
@@ -87,4 +87,38 @@ filter: invert();
 .nome-loja:hover{
     background-color:#415a55 ;
     cursor: pointer;
+}
+
+
+@media (max-width: 600px){
+    .nome-loja{
+        font-size: 8.2vw;
+        height: auto;
+    }
+    .input{
+        width: 30vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .cart{
+        width: 8vw;
+        margin-right: 3.2vw;
+    }
+    .userImg{
+        width: 8vw;
+    }
+    .contaName{
+        margin-right: 1.2vw;
+    }
+    .container-all{
+        align-items: center;
+   
+    }
+    .cart-number{
+        left: 7.2vw;
+    }
+    .logoutButton{
+        width: 29.2vw;
+    }
+
 }

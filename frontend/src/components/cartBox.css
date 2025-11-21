@@ -78,3 +78,28 @@
 
 
 }
+
+
+@media (max-width: 600px){
+    .cartBoxBody{
+        flex-direction: column;
+        height: 100vh;
+
+    }
+    .allCartbox{
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    .priceContainer{
+        margin-right: 1.2vw;
+    }
+    .cartImage{
+        width: 15vw;
+    }
+    .priceC{
+        margin-left: 5.2vw;
+    }
+    .trash{
+        width: 8vw;
+    }
+}

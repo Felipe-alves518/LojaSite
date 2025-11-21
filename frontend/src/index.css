@@ -1,8 +1,7 @@
-body {
+body,html {
 background-color: #1b263b;
 margin:0px;
 overflow-x: hidden;
-overflow-y: scroll;
 }
 
 input[type=button]{
