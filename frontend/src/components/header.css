@@ -125,6 +125,7 @@ filter: invert();
     }
     .account{
         margin-right: 1.2vw ;
+        margin-left: 1.5vw;
     }
 
 }
