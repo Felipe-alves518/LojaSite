@@ -98,14 +98,15 @@ filter: invert();
     .input{
         width: 30vw;
         margin-left: 5vw;
-        margin-right: 5vw;
+        margin-right: 2vw;
     }
     .cart{
         width: 8vw;
-        margin-right: 3.2vw;
+        margin-right: 2.5vw;
     }
     .userImg{
         width: 8vw;
+        
     }
     .contaName{
         margin-right: 1.2vw;
@@ -119,6 +120,11 @@ filter: invert();
     }
     .logoutButton{
         width: 29.2vw;
+    
+
+    }
+    .account{
+        margin-right: 1.2vw ;
     }
 
 }
