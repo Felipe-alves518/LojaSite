@@ -96,13 +96,13 @@ filter: invert();
         height: auto;
     }
     .input{
-        width: 30vw;
+        width: 25vw;
         margin-left: 5vw;
         margin-right: 2vw;
     }
     .cart{
         width: 8vw;
-        margin-right: 2.5vw;
+        margin-right: 3vw;
     }
     .userImg{
         width: 8vw;
