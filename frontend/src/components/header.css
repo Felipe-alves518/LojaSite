@@ -110,6 +110,8 @@ filter: invert();
     }
     .contaName{
         margin-right: 1.2vw;
+        width: 18vw;
+        overflow-x: clip;
     }
     .container-all{
         align-items: center;
@@ -124,8 +126,10 @@ filter: invert();
 
     }
     .account{
-        margin-right: 0.5vw ;
+        margin-right: 20.5vw ;
         margin-left: 1.5vw;
+        width: 10vw;
+        
     }
 
 }
