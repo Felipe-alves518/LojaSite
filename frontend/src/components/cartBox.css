@@ -83,8 +83,6 @@
 @media (max-width: 600px){
     .cartBoxBody{
         flex-direction: column;
-        height: 100vh;
-
     }
     .allCartbox{
         margin-left: 10vw;
@@ -102,4 +100,6 @@
     .trash{
         width: 8vw;
     }
+
+
 }
